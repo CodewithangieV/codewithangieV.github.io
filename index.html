@@ -7,6 +7,20 @@
   <meta name="description" content="Business Analyst & Data Scientist en formación. Transformo datos en decisiones. Python, Data Science y recursos gratis en español." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@300;400;500;700&display=swap" rel="stylesheet" />
+ 
+  <!-- ══ GOOGLE ANALYTICS ══════════════════════════════════════
+       PASO 1: Ve a analytics.google.com con tu cuenta Google
+       PASO 2: Crea propiedad → copia tu Measurement ID (G-XXXXXXXX)
+       PASO 3: Reemplaza los dos G-XXXXXXXXXX de abajo con tu ID real
+       PASO 4: Guarda y sube al repo. Listo. Gratis. Para siempre.
+  ═══════════════════════════════════════════════════════════════ -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
   <style>
     :root {
       --bg: #07070f;
@@ -19,11 +33,11 @@
       --subtle: #1e1e30;
       --border: #1a1a2e;
     }
-
+ 
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
+ 
     html { scroll-behavior: smooth; }
-
+ 
     body {
       background: var(--bg);
       color: var(--text);
@@ -32,7 +46,7 @@
       line-height: 1.6;
       overflow-x: hidden;
     }
-
+ 
     /* ── NOISE TEXTURE OVERLAY ── */
     body::before {
       content: '';
@@ -43,7 +57,7 @@
       z-index: 0;
       opacity: 0.4;
     }
-
+ 
     /* ── NAV ── */
     nav {
       position: sticky;
@@ -57,7 +71,7 @@
       border-bottom: 1px solid var(--border);
       backdrop-filter: blur(12px);
     }
-
+ 
     .logo {
       font-family: 'Space Mono', monospace;
       font-size: 0.95rem;
@@ -65,15 +79,15 @@
       letter-spacing: 0.02em;
       text-decoration: none;
     }
-
+ 
     .logo span { color: var(--text); }
-
+ 
     nav ul {
       list-style: none;
       display: flex;
       gap: 2.5rem;
     }
-
+ 
     nav a {
       color: var(--muted);
       text-decoration: none;
@@ -83,9 +97,9 @@
       text-transform: lowercase;
       transition: color 0.2s;
     }
-
+ 
     nav a:hover { color: var(--accent); }
-
+ 
     /* ── HERO ── */
     .hero {
       position: relative;
@@ -94,7 +108,7 @@
       margin: 0 auto;
       padding: 7rem 3rem 5rem;
     }
-
+ 
     .hero-eyebrow {
       font-family: 'Space Mono', monospace;
       font-size: 0.72rem;
@@ -105,7 +119,7 @@
       opacity: 0;
       animation: fadeUp 0.6s ease forwards;
     }
-
+ 
     h1 {
       font-size: clamp(2.6rem, 6vw, 4.5rem);
       font-weight: 700;
@@ -115,12 +129,12 @@
       opacity: 0;
       animation: fadeUp 0.6s ease 0.1s forwards;
     }
-
+ 
     h1 em {
       font-style: normal;
       color: var(--accent);
     }
-
+ 
     .hero-tagline {
       font-size: clamp(1rem, 2vw, 1.2rem);
       color: var(--muted);
@@ -130,12 +144,12 @@
       opacity: 0;
       animation: fadeUp 0.6s ease 0.2s forwards;
     }
-
+ 
     .hero-tagline strong {
       color: #9999bb;
       font-weight: 400;
     }
-
+ 
     .cta-group {
       display: flex;
       gap: 1rem;
@@ -144,7 +158,7 @@
       opacity: 0;
       animation: fadeUp 0.6s ease 0.3s forwards;
     }
-
+ 
     .btn-primary {
       background: var(--accent);
       color: var(--bg);
@@ -160,9 +174,9 @@
       text-decoration: none;
       display: inline-block;
     }
-
+ 
     .btn-primary:hover { opacity: 0.88; transform: translateY(-1px); }
-
+ 
     .btn-outline {
       background: transparent;
       color: #8888aa;
@@ -177,9 +191,9 @@
       text-decoration: none;
       display: inline-block;
     }
-
+ 
     .btn-outline:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-1px); }
-
+ 
     /* ── STATS ── */
     .stats {
       display: flex;
@@ -189,7 +203,7 @@
       opacity: 0;
       animation: fadeUp 0.6s ease 0.4s forwards;
     }
-
+ 
     .stat-num {
       font-family: 'Space Mono', monospace;
       font-size: 1.8rem;
@@ -197,7 +211,7 @@
       font-weight: 700;
       line-height: 1;
     }
-
+ 
     .stat-label {
       font-size: 0.72rem;
       color: var(--muted);
@@ -205,7 +219,7 @@
       text-transform: uppercase;
       margin-top: 0.35rem;
     }
-
+ 
     /* ── SECTION ── */
     section {
       position: relative;
@@ -215,7 +229,7 @@
       padding: 4rem 3rem;
       border-top: 1px solid var(--border);
     }
-
+ 
     .section-label {
       font-family: 'Space Mono', monospace;
       font-size: 0.68rem;
@@ -227,14 +241,14 @@
       align-items: center;
       gap: 1rem;
     }
-
+ 
     .section-label::after {
       content: '';
       flex: 1;
       height: 1px;
       background: var(--border);
     }
-
+ 
     /* ── PROYECTOS ── */
     .projects-grid {
       display: grid;
@@ -243,7 +257,7 @@
       background: var(--border);
       border: 1px solid var(--border);
     }
-
+ 
     .project-card {
       background: var(--bg);
       padding: 2rem;
@@ -251,9 +265,9 @@
       cursor: pointer;
       text-decoration: none;
     }
-
+ 
     .project-card:hover { background: var(--bg3); }
-
+ 
     .project-tech {
       font-family: 'Space Mono', monospace;
       font-size: 0.62rem;
@@ -263,7 +277,7 @@
       text-transform: uppercase;
       margin-bottom: 0.8rem;
     }
-
+ 
     .project-name {
       font-size: 1rem;
       font-weight: 500;
@@ -271,14 +285,14 @@
       margin-bottom: 0.6rem;
       line-height: 1.3;
     }
-
+ 
     .project-desc {
       font-size: 0.82rem;
       color: var(--muted);
       line-height: 1.65;
       font-weight: 300;
     }
-
+ 
     .project-arrow {
       display: inline-block;
       margin-top: 1.2rem;
@@ -288,16 +302,16 @@
       transition: opacity 0.2s;
       font-family: 'Space Mono', monospace;
     }
-
+ 
     .project-card:hover .project-arrow { opacity: 1; }
-
+ 
     /* ── RECURSOS ── */
     .recursos-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 1rem;
     }
-
+ 
     .recurso-card {
       background: var(--bg2);
       border: 1px solid var(--border);
@@ -306,9 +320,9 @@
       transition: border-color 0.2s, transform 0.2s;
       cursor: pointer;
     }
-
+ 
     .recurso-card:hover { border-color: var(--accent); transform: translateY(-2px); }
-
+ 
     .recurso-icon {
       font-family: 'Space Mono', monospace;
       font-size: 0.7rem;
@@ -317,21 +331,21 @@
       margin-bottom: 1rem;
       letter-spacing: 0.1em;
     }
-
+ 
     .recurso-name {
       font-size: 0.95rem;
       font-weight: 500;
       color: #ccccee;
       margin-bottom: 0.5rem;
     }
-
+ 
     .recurso-desc {
       font-size: 0.78rem;
       color: var(--muted);
       line-height: 1.6;
       font-weight: 300;
     }
-
+ 
     .badge-free {
       display: inline-block;
       margin-top: 1rem;
@@ -344,7 +358,7 @@
       letter-spacing: 0.08em;
       opacity: 0.7;
     }
-
+ 
     /* ── SOBRE MI ── */
     .about-grid {
       display: grid;
@@ -352,7 +366,7 @@
       gap: 4rem;
       align-items: start;
     }
-
+ 
     .about-text p {
       font-size: 0.95rem;
       color: #8888aa;
@@ -360,16 +374,16 @@
       font-weight: 300;
       margin-bottom: 1rem;
     }
-
+ 
     .about-text p strong { color: #bbbbdd; font-weight: 400; }
-
+ 
     .skills-list {
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
       margin-top: 1.5rem;
     }
-
+ 
     .skill-tag {
       font-family: 'Space Mono', monospace;
       font-size: 0.68rem;
@@ -380,60 +394,60 @@
       letter-spacing: 0.06em;
       transition: border-color 0.2s, color 0.2s;
     }
-
+ 
     .skill-tag:hover { border-color: var(--accent); color: var(--accent); }
-
+ 
     .about-numbers {
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
     }
-
+ 
     .about-num-item {
       padding: 1.5rem;
       background: var(--bg2);
       border-left: 2px solid var(--accent);
     }
-
+ 
     .about-num-item .num {
       font-family: 'Space Mono', monospace;
       font-size: 2rem;
       color: var(--accent);
       font-weight: 700;
     }
-
+ 
     .about-num-item .desc {
       font-size: 0.8rem;
       color: var(--muted);
       margin-top: 0.3rem;
       font-weight: 300;
     }
-
+ 
     /* ── CONTACTO ── */
     .contact-inner {
       max-width: 540px;
     }
-
+ 
     .contact-inner h2 {
       font-size: 1.8rem;
       font-weight: 500;
       color: #fff;
       margin-bottom: 0.8rem;
     }
-
+ 
     .contact-inner p {
       font-size: 0.9rem;
       color: var(--muted);
       margin-bottom: 2rem;
       font-weight: 300;
     }
-
+ 
     .contact-links {
       display: flex;
       gap: 1rem;
       flex-wrap: wrap;
     }
-
+ 
     /* ── FOOTER ── */
     footer {
       position: relative;
@@ -446,15 +460,15 @@
       color: var(--muted);
       letter-spacing: 0.1em;
     }
-
+ 
     footer span { color: var(--accent); }
-
+ 
     /* ── ANIMATIONS ── */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(16px); }
       to   { opacity: 1; transform: translateY(0); }
     }
-
+ 
     /* ── GLOW LINE ── */
     .glow-line {
       position: absolute;
@@ -463,7 +477,7 @@
       background: linear-gradient(90deg, transparent, var(--accent), transparent);
       opacity: 0.3;
     }
-
+ 
     /* ── RESPONSIVE ── */
     @media (max-width: 700px) {
       nav { padding: 1rem 1.5rem; }
@@ -472,21 +486,197 @@
       .about-grid { grid-template-columns: 1fr; gap: 2rem; }
       .stats { gap: 2rem; flex-wrap: wrap; }
     }
+ 
+    /* ══ PASTILLAS DE NIVEL ═══════════════════════════════ */
+    .nivel-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.6rem;
+      border-radius: 2px;
+      margin-bottom: 0.75rem;
+    }
+    .nivel-basico    { background: rgba(0,200,150,0.12); color: #00C896; border: 1px solid rgba(0,200,150,0.3); }
+    .nivel-inter     { background: rgba(245,200,66,0.12); color: #F5C842; border: 1px solid rgba(245,200,66,0.3); }
+    .nivel-avanzado  { background: rgba(255,94,91,0.12);  color: #FF5E5B; border: 1px solid rgba(255,94,91,0.3); }
+    .nivel-ds-basic  { background: rgba(79,195,247,0.12); color: #4FC3F7; border: 1px solid rgba(79,195,247,0.3); }
+    .nivel-ds-adv    { background: rgba(179,136,255,0.12);color: #B388FF; border: 1px solid rgba(179,136,255,0.3); }
+    .nivel-ia        { background: rgba(224,224,224,0.10);color: #E0E0E0; border: 1px solid rgba(224,224,224,0.25); }
+ 
+    /* ══ MODAL DESCARGA (email gate) ════════════════════════ */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.75);
+      z-index: 200;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(4px);
+    }
+    .modal-overlay.open { display: flex; }
+    .modal-box {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-top: 2px solid var(--accent);
+      border-radius: 4px;
+      padding: 2.5rem;
+      max-width: 420px;
+      width: 90%;
+      position: relative;
+    }
+    .modal-box h3 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #fff;
+      margin-bottom: 0.4rem;
+    }
+    .modal-box p {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+    .modal-input {
+      width: 100%;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-family: 'Syne', sans-serif;
+      font-size: 0.85rem;
+      padding: 0.75rem 1rem;
+      border-radius: 2px;
+      margin-bottom: 0.75rem;
+      outline: none;
+      transition: border-color 0.2s;
+      box-sizing: border-box;
+    }
+    .modal-input:focus { border-color: var(--accent); }
+    .modal-close {
+      position: absolute;
+      top: 1rem; right: 1rem;
+      background: none; border: none;
+      color: var(--muted); font-size: 1.2rem;
+      cursor: pointer; line-height: 1;
+    }
+    .modal-close:hover { color: var(--text); }
+    .modal-ok {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.68rem;
+      color: var(--accent);
+      margin-top: 0.5rem;
+      display: none;
+    }
+ 
+    /* ══ PLAYGROUND ══════════════════════════════════════════ */
+    .playground-wrap {
+      margin-top: 1.5rem;
+    }
+    .playground-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.75rem;
+    }
+    .playground-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.68rem;
+      color: var(--accent);
+      letter-spacing: 0.12em;
+    }
+    .playground-tabs {
+      display: flex;
+      gap: 0.5rem;
+    }
+    .tab-btn {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.08em;
+      padding: 0.25rem 0.7rem;
+      border-radius: 2px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .tab-btn.active, .tab-btn:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+    .editor-area {
+      width: 100%;
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 4px 4px 0 0;
+      color: #ccd6f6;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.82rem;
+      padding: 1.2rem;
+      resize: vertical;
+      min-height: 160px;
+      outline: none;
+      box-sizing: border-box;
+      line-height: 1.6;
+      transition: border-color 0.2s;
+    }
+    .editor-area:focus { border-color: var(--accent); }
+    .run-btn {
+      width: 100%;
+      background: var(--accent);
+      color: var(--bg);
+      border: none;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      padding: 0.7rem;
+      cursor: pointer;
+      border-radius: 0;
+      transition: opacity 0.2s;
+    }
+    .run-btn:hover { opacity: 0.85; }
+    .run-btn:disabled { opacity: 0.4; cursor: wait; }
+    .output-area {
+      background: #050510;
+      border: 1px solid var(--border);
+      border-top: none;
+      border-radius: 0 0 4px 4px;
+      padding: 1rem 1.2rem;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.78rem;
+      color: #00C896;
+      min-height: 60px;
+      white-space: pre-wrap;
+      line-height: 1.6;
+    }
+    .py-loading {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      padding: 0.5rem 0;
+    }
   </style>
 </head>
 <body>
-
+ 
   <!-- NAV -->
   <nav>
     <a href="#" class="logo">code<span>.withangie</span></a>
     <ul>
       <li><a href="#proyectos">proyectos</a></li>
       <li><a href="#recursos">recursos</a></li>
+      <li><a href="#playground">playground</a></li>
       <li><a href="#sobre-mi">sobre mí</a></li>
       <li><a href="#contacto">contacto</a></li>
     </ul>
   </nav>
-
+ 
   <!-- HERO -->
   <div class="hero">
     <div class="hero-eyebrow">// business analyst · data scientist en formación</div>
@@ -514,7 +704,7 @@
       </div>
     </div>
   </div>
-
+ 
   <!-- PROYECTOS -->
   <section id="proyectos">
     <div class="section-label">proyectos destacados</div>
@@ -539,32 +729,52 @@
       </a>
     </div>
   </section>
-
+ 
   <!-- RECURSOS -->
   <section id="recursos">
     <div class="section-label">recursos gratuitos</div>
     <div class="recursos-grid">
-      <div class="recurso-card">
+ 
+      <div class="recurso-card" onclick="openModal('Guía rápida de Pandas','cheatsheet-pandas-codewithangie.pdf')">
+        <span class="nivel-badge nivel-ds-basic">// Data Science · Básico</span>
         <div class="recurso-icon">PDF_01</div>
         <div class="recurso-name">Guía rápida de Pandas</div>
         <div class="recurso-desc">Las funciones que más vas a usar para limpiar y analizar datos. Con ejemplos reales.</div>
-        <div class="badge-free">gratis</div>
+        <div class="badge-free">gratis · descarga con email</div>
       </div>
-      <div class="recurso-card">
+ 
+      <div class="recurso-card" onclick="openModal('Primeros Pasos en Python','cheatsheet-python-basics-codewithangie.pdf')">
+        <span class="nivel-badge nivel-basico">// Python · Básico</span>
         <div class="recurso-icon">PDF_02</div>
-        <div class="recurso-name">30 días de Python</div>
-        <div class="recurso-desc">De cero a análisis de datos en 30 días. Ejercicios prácticos para tu vida real.</div>
-        <div class="badge-free">gratis</div>
+        <div class="recurso-name">Primeros Pasos en Python</div>
+        <div class="recurso-desc">Variables, listas, funciones y errores comunes. La base que necesitas para empezar.</div>
+        <div class="badge-free">gratis · descarga con email</div>
       </div>
-      <div class="recurso-card">
+ 
+      <div class="recurso-card" onclick="openModal('¿A dónde vas en Datos?','Niveles_datos.pdf')">
+        <span class="nivel-badge nivel-ds-adv">// Data Science · Mapa de Roles</span>
         <div class="recurso-icon">PDF_03</div>
-        <div class="recurso-name">Errores comunes en Python</div>
-        <div class="recurso-desc">Los errores que todos cometemos al empezar y cómo resolverlos rápido.</div>
-        <div class="badge-free">próximamente</div>
+        <div class="recurso-name">¿A dónde vas en Datos?</div>
+        <div class="recurso-desc">Todos los roles, niveles y herramientas del mundo data — desde donde empiezas hasta el techo.</div>
+        <div class="badge-free">gratis · descarga con email</div>
       </div>
+ 
     </div>
   </section>
-
+ 
+  <!-- MODAL EMAIL GATE -->
+  <div class="modal-overlay" id="downloadModal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <h3 id="modal-title">Descarga tu guía</h3>
+      <p>Déjame tu correo y te mando el PDF directo. Sin spam, solo recursos de Python y Data Science cuando los tenga listos.</p>
+      <input class="modal-input" type="text" id="modal-name" placeholder="Tu nombre" />
+      <input class="modal-input" type="email" id="modal-email" placeholder="tu@correo.com" />
+      <button class="btn-primary" style="width:100%;text-align:center;" onclick="submitEmail()">descargar PDF →</button>
+      <div class="modal-ok" id="modal-ok">// descargando... revisa tu carpeta de descargas</div>
+    </div>
+  </div>
+ 
   <!-- SOBRE MI -->
   <section id="sobre-mi">
     <div class="section-label">sobre mí</div>
@@ -600,7 +810,7 @@
       </div>
     </div>
   </section>
-
+ 
   <!-- CONTACTO -->
   <section id="contacto">
     <div class="section-label">contacto</div>
@@ -614,11 +824,170 @@
       </div>
     </div>
   </section>
-
+ 
+  <!-- PLAYGROUND -->
+  <section id="playground">
+    <div class="section-label">playground · practica aquí</div>
+    <p style="font-size:0.88rem;color:var(--muted);margin-bottom:1.5rem;font-weight:300;max-width:560px;">
+      Python directo en tu navegador. Sin instalar nada. Elige un ejemplo o escribe tu propio código.
+    </p>
+    <div class="playground-wrap">
+      <div class="playground-header">
+        <span class="playground-label">// python 3 · browser</span>
+        <div class="playground-tabs">
+          <button class="tab-btn active" onclick="loadSnippet('variables')">variables</button>
+          <button class="tab-btn" onclick="loadSnippet('listas')">listas</button>
+          <button class="tab-btn" onclick="loadSnippet('bucle')">bucle for</button>
+          <button class="tab-btn" onclick="loadSnippet('funcion')">función</button>
+        </div>
+      </div>
+      <textarea class="editor-area" id="pyEditor" spellcheck="false"># 🟢 Python Básico — Variables y tipos
+nombre = "Angie"
+edad = 34
+activa = True
+ 
+print(f"Hola, {nombre}!")
+print(f"Tienes {edad} años y tu cuenta está activa: {activa}")
+print(f"En 5 años tendrás {edad + 5} años.")
+</textarea>
+      <button class="run-btn" id="runBtn" onclick="runCode()" disabled>
+        ▶ cargando Python en tu browser...
+      </button>
+      <div class="output-area" id="pyOutput">// el resultado aparece aquí</div>
+    </div>
+  </section>
+ 
   <!-- FOOTER -->
   <footer>
     <span>code.withangie</span> · construido con código y café · 2026
   </footer>
-
+ 
+  <!-- PYODIDE: Python en el browser (WebAssembly) -->
+  <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
+  <script>
+    // ══ PYODIDE INIT ══════════════════════════════════
+    let pyodide = null;
+    async function initPyodide() {
+      pyodide = await loadPyodide();
+      const btn = document.getElementById('runBtn');
+      btn.disabled = false;
+      btn.textContent = '▶ correr código';
+    }
+    initPyodide();
+ 
+    async function runCode() {
+      if (!pyodide) return;
+      const code = document.getElementById('pyEditor').value;
+      const out = document.getElementById('pyOutput');
+      out.style.color = '#00C896';
+      // Capturar print output
+      pyodide.runPython(`
+import sys, io
+sys.stdout = io.StringIO()
+`);
+      try {
+        pyodide.runPython(code);
+        const result = pyodide.runPython('sys.stdout.getvalue()');
+        out.textContent = result || '// (sin output — ¿olvidaste el print?)';
+      } catch (e) {
+        out.style.color = '#FF5E5B';
+        out.textContent = '// Error:\n' + e.message;
+      }
+    }
+ 
+    // Snippets de ejemplo por nivel
+    const snippets = {
+      variables: `# 🟢 Python Básico — Variables y tipos
+nombre = "Angie"
+edad = 34
+activa = True
+ 
+print(f"Hola, {nombre}!")
+print(f"Tienes {edad} años y tu cuenta está activa: {activa}")
+print(f"En 5 años tendrás {edad + 5} años.")
+`,
+      listas: `# 🟢 Python Básico — Listas
+frutas = ["mango", "fresa", "kiwi", "uva"]
+ 
+print("Frutas:", frutas)
+print("Primera:", frutas[0])
+print("Última:", frutas[-1])
+print("Total:", len(frutas))
+ 
+frutas.append("guayaba")
+print("Después de agregar:", frutas)
+`,
+      bucle: `# 🟢 Python Básico — Bucle for
+lenguajes = ["Python", "SQL", "JavaScript"]
+ 
+for i, lang in enumerate(lenguajes, 1):
+    print(f"{i}. {lang}")
+ 
+print()
+# Con range
+for numero in range(1, 6):
+    print(f"Iteración {numero}: {'✓' * numero}")
+`,
+      funcion: `# 🟡 Python Intermedio — Funciones
+def calcular_promedio(numeros):
+    if len(numeros) == 0:
+        return 0
+    return sum(numeros) / len(numeros)
+ 
+calificaciones = [8.5, 9.0, 7.5, 10.0, 8.0]
+prom = calcular_promedio(calificaciones)
+ 
+print(f"Calificaciones: {calificaciones}")
+print(f"Promedio: {prom:.2f}")
+print(f"Aprobado: {'Sí' if prom >= 7 else 'No'}")
+`
+    };
+ 
+    function loadSnippet(key) {
+      document.getElementById('pyEditor').value = snippets[key];
+      document.getElementById('pyOutput').textContent = '// el resultado aparece aquí';
+      document.getElementById('pyOutput').style.color = '#00C896';
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      event.target.classList.add('active');
+    }
+ 
+    // ══ MODAL EMAIL GATE ══════════════════════════════
+    let currentFile = '';
+    function openModal(title, file) {
+      currentFile = file;
+      document.getElementById('modal-title').textContent = '// ' + title;
+      document.getElementById('modal-ok').style.display = 'none';
+      document.getElementById('modal-email').value = '';
+      document.getElementById('modal-name').value = '';
+      document.getElementById('downloadModal').classList.add('open');
+    }
+    function closeModal() {
+      document.getElementById('downloadModal').classList.remove('open');
+    }
+    function submitEmail() {
+      const email = document.getElementById('modal-email').value.trim();
+      const name = document.getElementById('modal-name').value.trim();
+      if (!email || !email.includes('@')) {
+        document.getElementById('modal-email').style.borderColor = '#FF5E5B';
+        return;
+      }
+      document.getElementById('modal-email').style.borderColor = '';
+      // Guardar en localStorage para analytics propio
+      const leads = JSON.parse(localStorage.getItem('cwa_leads') || '[]');
+      leads.push({ name, email, file: currentFile, date: new Date().toISOString() });
+      localStorage.setItem('cwa_leads', JSON.stringify(leads));
+      // Descarga directa del PDF
+      const a = document.createElement('a');
+      a.href = currentFile;
+      a.download = currentFile;
+      a.click();
+      document.getElementById('modal-ok').style.display = 'block';
+      setTimeout(closeModal, 2500);
+    }
+    // Cerrar modal al hacer click fuera
+    document.getElementById('downloadModal').addEventListener('click', function(e) {
+      if (e.target === this) closeModal();
+    });
+  </script>
 </body>
 </html>
